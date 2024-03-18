@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Adicionar uma Nova Carta {% endblock %}</h1>
+    <form method="post">
+        <label for="autor">Autor</label>
+        <br>
+        <input type="text" name="autor"
+               placeholder="Autor"
+               value="{{ request.form['autor'] }}"></input>
+        <br>
+        <label for="to">Para</label>
+        <br>
+        <input type="text" name="to"
+               placeholder="Nome do destinatário"
+               value="{{ request.form['to'] }}"></input>
+        <br>
+        <label for="title">Título</label>
+        <br>
+        <input type="text" name="title"
+               placeholder="Título da mensagem"
+               value="{{ request.form['title'] }}"></input>
+        <br>
+
+        <label for="content">Conteúdo da Mensagem</label>
+        <br>
+        <textarea name="content"
+                  placeholder="Conteúdo da mensagem"
+                  rows="15"
+                  cols="60"
+                  >{{ request.form['content'] }}</textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}

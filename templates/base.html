@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - Correio do Amor</title>
+    <favicon href="{{ url_for('static', filename='img/vecteezy_heart-letter_1187664.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <img class="logo" src="{{ url_for('static', filename='img/vecteezy_heart-letter_1187664.png') }}" alt="Correio do Amor">
+        <a href="{{ url_for('message.index') }}">Correio do Amor</a>
+        <a href="{{ url_for('message.create') }}">Nova Carta</a>
+        <a href="{{ url_for('login.login') }}">Login</a>
+        <a href="{{ url_for('message.about') }}">Sobre</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% for message in get_flashed_messages() %}
+            <div class="alert">{{ message }}</div>
+        {% endfor %}
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

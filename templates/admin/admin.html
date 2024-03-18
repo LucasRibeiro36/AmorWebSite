@@ -1,0 +1,17 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Cartinhas {% endblock %}</h1>
+    {% for message in messages %}
+        <div class='message'>
+            <h3>{{ message['title'] }}</h3>
+            <p>De: {{ message['autor'] }}</p>
+            <p>Para: {{ message['to'] }}</p>
+            <p>Data: {{ message['date'] }}</p>
+            <div class="message-content">
+                <p>Conteúdo:</p>
+                <p class="content-msg">{{ message['content'] }}</p>
+            </div>  
+        </div>
+    {% endfor %}
+{% endblock %}

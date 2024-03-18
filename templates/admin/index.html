@@ -1,0 +1,22 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Cartinhas {% endblock %}</h1>
+    {% for message in messages %}
+        <div class='message'>
+            <h3>{{ message['title'] }}</h3>
+            <p>De: {{ message['autor'] }}</p>
+            <p>Para: {{ message['to'] }}</p>
+            <p>Data: {{ message['date'] }}</p>
+            <p>Extra: {{ message['extra'] }}</p>
+            <p>Categoria: {{ message['category'] }}</p>
+            <p>Entregue: {{ message['isSubmited'] }}</p>
+            <div class="message-content">
+                <p>Conteúdo:</p>
+                <p class="content-msg">{{ message['content'] }}</p>
+            </div> 
+            <a href="{{ url_for('admin.isSubmited', id=message['id']) }}">Marcar como Entregue</a>
+            <a href="{{ url_for('admin.delete', id=message['id']) }}">Deletar</a>
+        </div>
+    {% endfor %}
+{% endblock %}

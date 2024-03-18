@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - Correio do Amor</title>
+    <favicon href="{{ url_for('static', filename='img/vecteezy_heart-letter_1187664.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <img class="logo" src="{{ url_for('static', filename='img/vecteezy_heart-letter_1187664.png') }}" alt="Correio do Amor">
+        <a href="{{ url_for('user.index') }}">Correio do Amor</a>
+        <a href="{{ url_for('user.create') }}">Nova Carta</a>
+        <a href="#">Olá, {{ current_user.username }}</a>
+        <a href="{{ url_for('login.logout') }}">Sair</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% for message in get_flashed_messages() %}
+            <div class="alert">{{ message }}
+                <form>
+                    <button type="submit" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </form>
+        </div> 
+        {% endfor %}
+        {% block content %} {% endblock %}
+    </div>
+</body>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+       <script>
+              $(document).ready(function() {
+              $('.js-example-basic-single').select2();
+              });
+       </script>
+</html>

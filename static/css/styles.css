@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+nav {
+    background-color: #d64161;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #970020;
+    background-color: #ffd5de;
+    border-radius: 5px;
+    border: 1px solid #970020;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 20px); /* Calculando a largura considerando o padding */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #d64161;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #c12b4b;
+}
+
+div .message {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+div .message-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+div .message-content .content-msg {
+    margin-left: 20px;
+}
+
+.login {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9e6e6; /* Cor de fundo rosa claro */
+    border-radius: 10px;
+
+    /* Centraliza horizontal e verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login h1 {
+    text-align: center;
+    color: #ff0066; /* Cor do título em rosa */
+}
+
+.login label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ff0066; /* Cor do texto das labels em rosa */
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ff0066; /* Cor da borda em rosa */
+    border-radius: 5px;
+    box-sizing: border-box; /* Mantém o tamanho total do campo incluindo padding e borda */
+    max-width: 300px; /* Defina o tamanho máximo para os campos de entrada */
+}
+
+.login input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff0066; /* Cor de fundo do botão em rosa */
+    color: #fff; /* Cor do texto do botão em branco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+    background-color: #d6004c; /* Cor de fundo do botão em rosa mais escuro ao passar o mouse */
+}
+
+h1 {
+    text-align: center;
+    color: #ff0066; /* Cor do título em rosa */
+    font-size: 24px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+.button-voltar {
+    background-color: #d64161;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.mostrar-input {
+    background-color: #d64161;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
